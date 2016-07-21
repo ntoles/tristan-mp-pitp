@@ -1,0 +1,116 @@
+
+#
+#	Tristan-mp input file
+#
+#
+
+<node_configuration>
+
+sizex	= 1                    # number of cpus in x direction
+sizey 	= 1			# number of cpus in the y direction
+
+<time>
+
+last 	= 6000000		# last timestep
+
+c	= .45			# velocity of light in comp. units (this defines the timestep)
+
+timespan= 60000000 		# time, in seconds, available to run the problem, 
+                                # to not save restart before the end
+
+<grid>
+
+mx0 	= 128 		# number of actual grid points in the x direction
+my0 	= 2			# number of actual grid points in the y direction
+
+mz0 	= 1 			# ... (ignored for 2D simulations)
+
+<dynamic_grid>
+
+dynmx		= 0		# 1 for dynamic allocation of mx
+dynmxstart 	= 1		# starting timestep
+dynmxinterval 	= 200		# update interval
+mxmin		= 7		# minimum mx/cpu
+
+dynmy 		= 0
+dynmystart	= 1
+dynmyinterval	= 200
+mymin		= 7
+
+<algorithm>
+
+highorder	= 0	       # 0 -- 2nd order FDTD field integrateion; 1 -- 4th order; 
+                               # don't use 1 for non-relativistic flows 
+
+Corr		= 1.025	       # correction for the speed of light
+ntimes		= 32		# number of passes for smoothing filter (current)
+
+<restart>
+
+irestart	= 0		# 1 to restart the simulation from saved restart/*.d files.
+intrestart	= 10000		# often to save restart files. They overwrite previous *d files.
+laprestart	= 0		# if different from 0, restart from a named restart file, saved at timestep laprestart 
+namedrestartint = 80000000      # interval for saving named restart files, like restart.lap01234.d
+
+<output>
+
+interval	= 50		# plot interval
+pltstart	= 0		# starting iteration for first plot
+
+istep		= 1 		# downsampling factor for grid output
+stride		= 1		# particle stride for particle output
+
+###############################################################
+writetestlec    = 0             # write test electrons for tracking 
+dlaplec         = 90            # interval
+teststartlec    = 1000000                # starting lap 
+testendlec      = 6000000
+
+writetestion    = 0             # write test ions for tracking
+dlapion         = 600           # interval
+teststartion    = 1000000                # starting lap 
+testendion      = 6000000
+###############################################################
+
+<boundaries>
+
+periodicx	= 1			# periodic boundaries in the x direction?
+periodicy	= 1			# periodic boundaries in the y direction?
+periodicz	= 1			# periodic boundaries in the z direction?
+
+<domain>
+
+enlarge		= 0 			# if 1, enlarge box in the x direction if injector is close to right wall
+
+<fields>
+
+btheta	= 0			# bfield angle bphi=0 -> bz, bphi=90 in x-y plane, btheta=0-> parallel
+bphi	= 90 			#
+
+<particles>
+
+sigma	= 0.00		# magnetization number (omega_ce/omega_pe)^2, including gamma0 for inertia
+maxptl0 = 1e8		# max number of particles in the simulation
+ppc0 	= 64		# number of particles per cell
+
+
+delgam 	= 2.e-5	         # delta gamma for ions (delgam = k T_i / m_i c^2, T_i is ion temperature)
+me	= 1.			# electron mass
+mi	= 1. 			# ion mass (actually mass to charge ratio)
+
+gamma0	= 0.5			# flow drift gamma. If < 1, interpreted as v/c. 
+				# the drift of background plasma in the negative x direction
+c_omp	= 10			# electron skin depth in cells
+
+<problem>
+
+temperature_ratio = 1       # T_e/T_i
+
+external_fields = 0         # if nonzero, add external nonevolving fields to mover; defined in user file
+sigma_ext = 0.           # strength of external magnetization,(omega_ce/omega_pe)^2, 
+                         # including gamma0 
+
+user_part_bcs=0             # call particle_bc_user routine from user file, specify particle bcs like walls
+
+
+
