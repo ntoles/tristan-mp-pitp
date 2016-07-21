@@ -81,7 +81,9 @@ https://github.com/pcrumley/Iseult
 It requires anaconda to run. We had good experience with anaconda 4.0.0 
 on Mac, but not later. The older version is available on anaconda's website. 
 
-To launch the vis tool, run (path to Iseult)Iseult/iseult.py
+To launch the vis tool, run (path to Iseult)Iseult/iseult.py .
+This will open interactive windows. Right click on plots to get more options. 
+
 load.py is a script that loads HDF5 files into a python dictionary, 
 that can be accessed as d[i]['bz'], where i is the file number. 
 
