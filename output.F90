@@ -5101,8 +5101,9 @@ subroutine meanq_fld_cur(totname)
   curz=0.
   
   do nn0=1,maxptl
-
-     gamprt=1./sqrt(1.+p(nn0)%u**2+p(nn0)%v**2+p(nn0)%w**2)
+     if(nn0.gt.ions .and. nn0 .lt. maxhlf) cycle
+     if(nn0 .gt. maxhlf+lecs) cycle
+    gamprt=1./sqrt(1.+p(nn0)%u**2+p(nn0)%v**2+p(nn0)%w**2)
 
      addprtx=0.
      addprty=0.
