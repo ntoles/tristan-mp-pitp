@@ -2489,21 +2489,7 @@ subroutine apply_filter1_opt()
 			enddo
 		enddo
 		
-#ifndef twoD
-		do k=3,mz-3 
-#else
-		do k=1,1
-#endif
-			do j=3,my-3 
-				do i=istr,ifin 
-       
-					temp(i,j,k)=wtm1*curx(i-1,j,k)+wt*curx(i,j,k)+wtp1*curx(i+1,j,k)
-				enddo
-			enddo
-		enddo
 
-
-  
 
 
 #ifndef twoD
