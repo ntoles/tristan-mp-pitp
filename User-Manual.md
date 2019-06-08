@@ -6,6 +6,7 @@ Tristan-mp stands for TRIdimensional STANford - Massively Parallel code, and is 
 
 Particle-In-Cell simulation model
 The basic set of equations solved by Tristan-mp are Maxwell's equations:
+
 ![Maxwell Eq 1](/assets/MaxwellEQ1.png) (1)
 
 ![Maxwell Eq 2](/assets/maxwellEQ2.png) (2)
