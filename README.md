@@ -23,33 +23,34 @@ When using code from github, clone it to your local machine,
 switch to "master" branch. You can create your branch off of master.
 
 On local machine:
-git clone https://github.com/ntoles/tristan-mp-pitp.git
+`git clone https://github.com/ntoles/tristan-mp-pitp.git`
 
 copy some example files to start with
 
-cp user_weibel.F90 user_mysetup.F90
+`cp user_weibel.F90 user_mysetup.F90`
 
-cp ../Makefile Makefile.mysetup
+`cp ../Makefile Makefile.mysetup`
 
-edit user_mysetup.F90
-edit Makefile.mysetup to add USER_FILE=user_mysetup 
+edit `user_mysetup.F90`
+edit `Makefile.mysetup` to add `USER_FILE=user_mysetup`
 (no need for extension F90)
 
 To compile
+```bash
 cd source directory 
 make -f Makefile.mysetup clean
 make -f Makefile.mysetup
-
-3D version is enabled when -DtwoD flag is omitted from the Makefile. 
+```
+3D version is enabled when `-DtwoD` flag is omitted from the Makefile. 
  
 You need to have parallel HDF5 library installed with intel or GNU compilers, 
 which will create h5pfc alias for the compiler. Some instructions for 
 installation are on wiki page. For Macs brew seems to work fine with gfortran:
-
+```bash
 $ brew install gcc
 $ brew install openmpi --enable-mpi-thread-multiple
 $ brew install hdf5 --with-fortran --with-mpi
-
+```
 This will produce tristan-mp2d executable. 
 
 To run:
