@@ -24,10 +24,10 @@ Welcome to the tristan-mp-pu wiki!
   * [Compiling Tristan-MP](Downloading-and-Compiling-Tristan#compiling)
 
 
-* [Running your first Tristan-MP Simulation](running-your-first-tristan-mp-simulation)
-  * [Getting ready](running-your-first-tristan-mp-simulation#getting-ready)
-  * [Editing the input file](running-your-first-tristan-mp-simulation#editing-the-input-file)
-  * [Submitting the job](running-your-first-tristan-mp-simulation#submitting-jobs)
+* [Running your first Tristan-MP Simulation](Running-your-first-Tristan-MP-simulation)
+  * [Getting ready](Running-your-first-Tristan-MP-simulation#getting-ready)
+  * [Editing the input file](Running-your-first-Tristan-MP-simulation#editing-the-input-file)
+  * [Submitting the job](Running-your-first-Tristan-MP-simulation#submitting-jobs)
 
 ## Analyzing and Visualizing your simulations
 
