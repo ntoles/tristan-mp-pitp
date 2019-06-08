@@ -1,4 +1,4 @@
-*This section assumes you have already [logged into perseus](https://github.com/PrincetonUniversity/tristan-mp-pu/wiki/Logging-in-to-perseus) and followed all the instructions to ensure you have loaded all the modules required to compile tristan-MP*
+*This section assumes you have already [logged into perseus](Logging-in-to-perseus.md) and followed all the instructions to ensure you have loaded all the modules required to compile tristan-MP*
 
 ## Downloading Tristan-MP from Github
 Inside of perseus, cd to your tigress directory
@@ -18,7 +18,7 @@ Create your own branch of Tristan-MP where you can edit your user-files
 ```bash
 git checkout -b YOUR_NAME
 ```
-The structure of Tristan is such that you should not have to edit the main code to change the set-up of the files (more details [here](https://github.com/PrincetonUniversity/tristan-mp-pu/wiki/Code-Features)). Instead, the simulation set-up is changed using user_files that define important functions in the code. You should use your own user files. Make a new directory where you will save your user files    
+The structure of Tristan is such that you should not have to edit the main code to change the set-up of the files (more details [here](Code-Features.md)). Instead, the simulation set-up is changed using user_files that define important functions in the code. You should use your own user files. Make a new directory where you will save your user files    
 ```bash    
 mkdir user_NAME
 ```
@@ -61,4 +61,4 @@ make: h5pcc: Command not found
 make: *** [obj/system.o] Error 127
 ```
 
-That means you have not loaded the proper modules to compile the code. Please ensure you are logged into perseus by typing ```bash hostname```. If you are logged into perseus, check that you have loaded all the neccessary modules by typing ```bash module list``` you should find the following modules ```intel, intel-mpi, hdf5/intel-16.0/intel-mpi/1.8.16``` See more [here](https://github.com/PrincetonUniversity/tristan-mp-pu/wiki/Logging-in-to-perseus). Remember to run ```make clean``` before trying to recompile.
+That means you have not loaded the proper modules to compile the code. Please ensure you are logged into perseus by typing ```bash hostname```. If you are logged into perseus, check that you have loaded all the neccessary modules by typing ```bash module list``` you should find the following modules ```intel, intel-mpi, hdf5/intel-16.0/intel-mpi/1.8.16``` See more [here](Logging-in-to-perseus.md). Remember to run ```make clean``` before trying to recompile.

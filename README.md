@@ -14,7 +14,7 @@ the user would not need to edit any of the main source files in the main
 tristan-mp directory. 
 
 All of the user-specific configuration should be possible to confine
-to user_* routines. There are three example user configuration files 
+to `user_*` routines. There are three example user configuration files 
 in main directory, showing a counterstreaming Weibel instability
 setup, two-stream instability and a collisionless shock simulation. 
 There are also sample input files.
@@ -23,33 +23,34 @@ When using code from github, clone it to your local machine,
 switch to "master" branch. You can create your branch off of master.
 
 On local machine:
-git clone https://github.com/ntoles/tristan-mp-pitp.git
+`git clone https://github.com/ntoles/tristan-mp-pitp.git`
 
 copy some example files to start with
 
-cp user_weibel.F90 user_mysetup.F90
+`cp user_weibel.F90 user_mysetup.F90`
 
-cp ../Makefile Makefile.mysetup
+`cp ../Makefile Makefile.mysetup`
 
-edit user_mysetup.F90
-edit Makefile.mysetup to add USER_FILE=user_mysetup 
+edit `user_mysetup.F90`
+edit `Makefile.mysetup` to add `USER_FILE=user_mysetup`
 (no need for extension F90)
 
 To compile
+```bash
 cd source directory 
 make -f Makefile.mysetup clean
 make -f Makefile.mysetup
-
-3D version is enabled when -DtwoD flag is omitted from the Makefile. 
+```
+3D version is enabled when `-DtwoD` flag is omitted from the Makefile. 
  
 You need to have parallel HDF5 library installed with intel or GNU compilers, 
 which will create h5pfc alias for the compiler. Some instructions for 
 installation are on wiki page. For Macs brew seems to work fine with gfortran:
-
+```bash
 $ brew install gcc
 $ brew install openmpi --enable-mpi-thread-multiple
 $ brew install hdf5 --with-fortran --with-mpi
-
+```
 This will produce tristan-mp2d executable. 
 
 To run:
@@ -59,10 +60,10 @@ Copy example submit and input files from directory
 (see wiki page for example submit
 files for clusters; you don't need these on your desktop/laptop).
  
-Input file has to be named "input" in the run directory, or the executable takes -i option. 
+Input file has to be named "input" in the run directory, or the executable takes `-i` option. 
 E.g.: 
-./tristan-mp2d -i input.weibel
-(for MPI, it can be, e.g.: srun -n 16 ./tristan-mp2d -i input.weibel)
+`./tristan-mp2d -i input.weibel`
+(for MPI, it can be, e.g.: `srun -n 16 ./tristan-mp2d -i input.weibel`)
 Note that you need to edit the input file to set the number of domain sub-partitions
  sizex * sizey * sizez be equal to the total number of cores to be used. sizez = 1 in 2D. 
 
