@@ -6,16 +6,15 @@ Tristan-mp stands for TRIdimensional STANford - Massively Parallel code, and is 
 
 Particle-In-Cell simulation model
 The basic set of equations solved by Tristan-mp are Maxwell's equations:
+<img src="_img/MaxwellEQ1.png" alt="Maxwell 1" class="inline"/> (1)
 
-[[https://tigress-web.princeton.edu/~pcrumley/maxwell1.png|alt"Maxwell 1"]] (1)
-
-[[https://tigress-web.princeton.edu/~pcrumley/maxwell2.png|alt"Maxwell 2"]] (2)
+<img src="_img/maxwellEQ2.png" alt="Maxwell 2" class="inline"/> (2)
 
 along with the Lorentz force equation, and the relativistic dynamic equations for the electrons and ions
 
-[[https://tigress-web.princeton.edu/~pcrumley/lorentz.png|alt"Lorentz eq."]] (3)
+<img src="_img/LorentzEQ.png" alt="Lorentz Eq." class="inline"/> (3)
 
-[[https://tigress-web.princeton.edu/~pcrumley/position.png|alt"Position eq."]] (4)
+<img src="_img/position.png" alt="Position Eq." class="inline"/> (4)
 
 The particles' positions and velocities are used to calculate the current, which is used as a source term in Eq. (2). To self-consistently solve this set of equations, the electromagnetic fields and particles are first initialized in the simulation box, assuring initially divergence-free Electric and Magnetic fields, which is accomplished by initializing electrons and ions (or positrons) in the same spatial positions. The finite difference numerical implementation of the above equations, which usually varies from code to code, along with the numerical methods used, are presented in the next section.
 
@@ -23,7 +22,7 @@ The particles' positions and velocities are used to calculate the current, which
 
 Tristan-mp uses time-centered and space-centered finite difference schemes to advance the equations in time, and to calculate spatial derivatives, so that the algorithm is second order accurate in space and time. A 3D Yee mesh [5] is used to store the Magnetic and Electric fields (see Fig. 1), and a tri-linear interpolation function (linear in each spatial dimension) is used to interpolate the Electric and Magnetic fields to the particles' positions. Furthermore, a three point digital binomial filter [3,4], with weights 0.25, 0.5, 0.25, is used along each spatial dimension on the source terms for the field equations, in order to suppress non-physical high-frequency field modes, which are due to the finite difference nature of the derivative calculations. Also, there is an option to select from the regular second order finite difference method [5], and a fourth order stencil as set forward in [6]; the purpose of the fourth order stencil is to reduce the effect of numerical Cerenkov instability, which might become a relevant factor for some relativistic runs [6].
 
-[[https://tigress-web.princeton.edu/~pcrumley/yeemesh.jpg|alt"Yee-mesh"]]
+<img src="_img/YeeMesh.jpg" alt="Position Eq." class="inline"/> (4)
 
 The electromagnetic fields are used to advance the particles' velocities using Eq. (3). There are two particle movers available in the code, both solving Eq. (3) and Eq. (4) explicitly: an implementation of the Boris algorithm [6], and an implementation of the Vay pusher [7]. These are two similar methods, with the Vay pusher having some advantages over the regular Boris algorithm in the relativistic regime.
 
@@ -38,7 +37,7 @@ The main PIC loop in Tristan-mp proceeds as follows, given the initial Electric 
 
 Simulation and physical units
 
-Tristan employs an unconventional system of electromagnetic units. Details about this system of units can be found in [this document](https://tigress-web.princeton.edu/~pcrumley/tristan_units.pdf) (it has several typos, unfortunately). Note that, in practice, detailed understanding of this system of units is not necessary, as most every quantity can be expressed in dimensionless units. E.g. time normalized by plasma frequency, space by skin depths, speeds in terms of speed of light. By constructing dimensionless ratios, it is possible to avoid ever needing the conversion of any quantity into cgs.
+Tristan employs an unconventional system of electromagnetic units. Details about this system of units can be found in [this document](_pdf/tristan_units.pdf) (it has several typos, unfortunately). Note that, in practice, detailed understanding of this system of units is not necessary, as most every quantity can be expressed in dimensionless units. E.g. time normalized by plasma frequency, space by skin depths, speeds in terms of speed of light. By constructing dimensionless ratios, it is possible to avoid ever needing the conversion of any quantity into cgs.
 
 Useful facts about code units: Electron plasma frequency in code units (inverse timesteps) is omega_pe = sqrt( q_e n / ((m/m_e) gamma)), where q is the charge of the particle, n density and gamma is the typical lorenz factor, m is particle's mass. Note that here 4 pi = 1 compared to cgs, and q_e/m_e = 1 by definition.
 Cyclotron frequency: omega_c = B/(gamma (m/m_e) c) (in inverse time steps). Magnetization sigma = (omega_c)^2/ (omega_p)^2 (c/v)^2 = 1/M_A^2, where M_A is the alfvenic Mach #.
