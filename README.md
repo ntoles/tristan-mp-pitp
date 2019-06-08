@@ -14,7 +14,7 @@ the user would not need to edit any of the main source files in the main
 tristan-mp directory. 
 
 All of the user-specific configuration should be possible to confine
-to user_* routines. There are three example user configuration files 
+to `user_*` routines. There are three example user configuration files 
 in main directory, showing a counterstreaming Weibel instability
 setup, two-stream instability and a collisionless shock simulation. 
 There are also sample input files.
@@ -60,7 +60,7 @@ Copy example submit and input files from directory
 (see wiki page for example submit
 files for clusters; you don't need these on your desktop/laptop).
  
-Input file has to be named "input" in the run directory, or the executable takes -i option. 
+Input file has to be named "input" in the run directory, or the executable takes `-i` option. 
 E.g.: 
 `./tristan-mp2d -i input.weibel`
 (for MPI, it can be, e.g.: `srun -n 16 ./tristan-mp2d -i input.weibel`)
