@@ -1,7 +1,8 @@
 Below is an example of a periodic box with counter-moving cold beam, which is unstable to the Weibel instability. 
 
-<img src="_img/sample_weibelBz.jpg" alt="Bz" class="inline"/>
-<img src="_img/sample_weibel_dens.jpg" alt="Density" class="inline"/>
+![Bz](/_img/sample_weibelBz.jpg).
+![Density](/_img/sample_weibel_dens.jpg).
+
 
 
 You can reproduce these results similar to these by following the instructions [here](Downloading-and-Compiling-Tristan) and [here](Running-your-first-Tristan-MP-simulation) but compiling with the command
