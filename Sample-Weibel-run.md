@@ -1,4 +1,4 @@
-Below is an example of a periodic box with counter-moving cold beam, which are unstable to the Weibel instability. 
+Below is an example of a periodic box with counter-moving cold beam, which is unstable to the Weibel instability. 
 
 <img src="_img/sample_weibelBz.jpg" alt="Bz" class="inline"/>
 <img src="_img/sample_weibel_dens.jpg" alt="Density" class="inline"/>
