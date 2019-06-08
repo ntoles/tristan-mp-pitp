@@ -1,6 +1,6 @@
 Below is an example of a periodic box with counter-moving cold beam, which is unstable to the Weibel instability. 
 
-![Bz]({{ "/_img/sample_weibelBz.jpg" | prepend: site.github.url }}).
+<img src="{{"/_img/sample_weibelBz.jpg" | prepend: site.github.url }}"/>
 ![Density]( {{ site.github.url }} _img/sample_weibel_dens.jpg).
 
 
