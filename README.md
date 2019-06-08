@@ -5,7 +5,7 @@ Pre-release version for testing.
 Developed by: Anatoly Spitkovsky, Luis Gargate, Jaehong Park, Lorenzo Sironi. 
 Based on original TRISTAN code by Oscar Buneman. 
 
-See http://tristan-mp.wikispaces.com for more extensive documentation. 
+See [this wiki](Home.md) for more extensive documentation. 
 Warning: some of the info on the wiki is obsolete. 
 
 Organization and suggested workflow: 
