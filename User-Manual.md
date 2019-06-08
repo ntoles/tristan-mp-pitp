@@ -12,7 +12,7 @@ The basic set of equations solved by Tristan-mp are Maxwell's equations:
 
 along with the Lorentz force equation, and the relativistic dynamic equations for the electrons and ions
 
-![Lorentz Eq](_img/LorentzEz.png) (3)
+![Lorentz Eq](_img/LorentzEq.png) (3)
 
 ![Position Eq](_img/position.png) (4)
 
