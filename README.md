@@ -62,8 +62,8 @@ files for clusters; you don't need these on your desktop/laptop).
  
 Input file has to be named "input" in the run directory, or the executable takes -i option. 
 E.g.: 
-./tristan-mp2d -i input.weibel
-(for MPI, it can be, e.g.: srun -n 16 ./tristan-mp2d -i input.weibel)
+`./tristan-mp2d -i input.weibel`
+(for MPI, it can be, e.g.: `srun -n 16 ./tristan-mp2d -i input.weibel`)
 Note that you need to edit the input file to set the number of domain sub-partitions
  sizex * sizey * sizez be equal to the total number of cores to be used. sizez = 1 in 2D. 
 
