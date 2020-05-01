@@ -572,8 +572,8 @@ subroutine deposit_particles()
 		! to send to another processor
 		if(perx .ne. 0 .and. in .and. sizex .ne. 1) then
 			in=.false.	
-			pery=0
-			perz=0
+			if(sizey .ne. 1) pery=0
+			if(sizez .ne. 1) perz=0
 		endif
 				
 		! assume non-uniform mx
@@ -588,8 +588,8 @@ subroutine deposit_particles()
 		! to send to another processor
 		if(pery .ne. 0 .and. in .and. sizey .ne. 1) then
 			in=.false.
-			perx=0
-			perz=0
+			if(sizex .ne. 1) perx=0
+			if(sizez .ne. 1) perz=0
 		endif
 		
 		! assume non-uniform my
@@ -607,8 +607,8 @@ subroutine deposit_particles()
 		! to send to another processor
 		if(perz .ne. 0 .and. in ) then
 			in=.false.
-			perx=0
-			pery=0
+			if(sizex .ne. 1) perx=0
+			if(sizey .ne. 1) pery=0
 		endif	
 		! assume non-uniform mz
 		if(perz .lt. 0) then		
@@ -879,8 +879,8 @@ subroutine deposit_particles()
 		! to send to another processor
 		if(perx.ne.0 .and. in .and. sizex.ne.1) then
 			in=.false.	
-			pery=0
-			perz=0
+			if(sizey .ne. 1) pery=0
+			if(sizez .ne. 1) perz=0
 		endif
 		
 		! assume non-uniform mx in general
@@ -895,8 +895,8 @@ subroutine deposit_particles()
 		! to send to another processor
 		if(pery.ne.0 .and. in .and. sizey.ne.1) then
 			in=.false.	
-			perx=0
-			perz=0
+			if(sizex .ne. 1) perx=0
+			if(sizez .ne. 1) perz=0
 		endif
 		
 		! assume non-uniform my
@@ -913,8 +913,8 @@ subroutine deposit_particles()
 		! to send to another processor
 		if(perz .ne. 0 .and. in ) then
 			in=.false.	
-			perx=0
-			pery=0
+			if(sizex .ne. 1) perx=0
+			if(sizey .ne. 1) pery=0
 		endif	
 		! assume non-uniform mz
 		if(perz .lt. 0) then		
