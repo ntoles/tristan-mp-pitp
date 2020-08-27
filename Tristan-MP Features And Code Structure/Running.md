@@ -5,7 +5,7 @@ parent: Tristan-MP Features and Code Structure
 nav_order: 3
 ---
 
-**This page is deprecated from previous instructions on tristan-MP. Please see [this](/GettingStarted/running-your-first-tristan-mp-simulation) instead.**
+**This page is deprecated from previous instructions on tristan-MP. Please see [this](/tristan-mp-pitp/GettingStarted/Running-your-first-Tristan-MP-simulation/) instead.**
 
 ## Running Tristan-mp
 

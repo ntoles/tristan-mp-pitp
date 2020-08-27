@@ -6,7 +6,7 @@ nav_order: 2
 ---
 **NEEDS UPDATING: VERY OUT OF DATE**
 
-When `tristan-mp` is run, it looks for a file named `input` inside of the current directory. The `input` file contains all of the
+When `tristan-mp` is run, it looks for a file named `input` inside of the current directory. The `input` file contains all of the parameters we pass to the simulation.
 
 ## Input file structure
 
