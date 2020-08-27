@@ -54,3 +54,20 @@ FC = /PATH/TO/hdf5-1.8.21/bin/h5pfc # replace with the actual path
 LD = /PATH/TO/hdf5-1.8.21/bin/h5pfc
 PERFORMANCE = -O3 -I/PATH/TO/hdf5-1.8.21/include -L/PATH/TO/hdf5-1.8.21/lib
 ```
+
+
+## Submit Scripts for NERSC
+
+You should look at the official guide to running jobs on Cori, but here is a
+good template of a slurm script to run on the Haswell cores.
+```bash
+#!/bin/bash
+#SBATCH --qos=regular
+#SBATCH --nodes=175
+#SBATCH --tasks-per-node=32
+#SBATCH --constraint=haswell
+#SBATCH -t 48:00:00                                                             
+#SBATCH --mail-type=begin,end,fail
+#SBATCH --mail-user=USER.EMAIL@gmail.com
+srun -n 5600 ./tristan-mp2d -i input.a > out
+```
