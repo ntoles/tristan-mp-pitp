@@ -44,8 +44,6 @@ heading_anchors: true
 #    - "//github.com/pmarsceill/just-the-docs"
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Website compiled by <a href=\"https://www.linkedin.com/in/patrick-crumley/\">Patrick Crumley</a>. Please feel free to contribute on <a href=\"https://github.com/pcrumley/ml_stat_resources\">GitHub.</a>"
-
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
