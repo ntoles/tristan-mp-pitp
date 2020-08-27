@@ -44,7 +44,7 @@ make -j 4 # parallel compile
 make install # install
 ```
 Finally you'll compile tristan following the instructions
-[here](/GettingStarted/Downloading-and-compiling-tristan),
+[here](~/GettingStarted/Downloading-and-compiling-tristan),
 except you will need to change your tristan-mp `Makefile` to point to version
 of `HDF5` you just compiled. You can keep all parts the same except change the
 following flags and variables where they occur in the original `Makefile`

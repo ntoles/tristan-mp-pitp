@@ -4,7 +4,7 @@ has_children: False
 parent: Tristan-MP Features and Code Structure
 nav_order: 3
 ---
-**THIS SECTION IS OLD AND DEPRECATED. PLEASE SEE [THIS](/GettingStarted/Downloading-and-Compiling-Tristan.md) INSTEAD**
+**THIS SECTION IS OLD AND DEPRECATED. PLEASE SEE [THIS](~/GettingStarted/Downloading-and-Compiling-Tristan.md) INSTEAD**
 
 ## Compilation
 There are three different steps involved in the compilation of Tristan-mp. The first two steps are the compilation of the MPI and HDF5 libraries if they are not already available on the system you are going to run. For most cases, there will be a preferred system-specific MPI implementation for most of the high-performance computational clusters where you should be running Tristan-mp. You should always use this MPI library implementation; just be aware that Fortran bindings to the library are necessary (they usually are included by default). Regarding the HDF5 libraries, when available they still might not have the required fortran bindings and/or parallel output bindings, which are a requirement of the code. As such you might have to compile your own version of the HDF5 library. The following two sections show you how to do this, but they are not intended as a substitute for the documentation of the libraries, and assume a basic knowledge of Unix systems. For more information read the documentation available with the MPI and HDF5 library distributions.
