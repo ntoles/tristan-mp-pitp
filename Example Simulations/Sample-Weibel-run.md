@@ -13,7 +13,7 @@ Below is an example of a periodic box with counter-moving cold beam, which is un
 
 
 
-You can reproduce these results similar to these by following the instructions [here](~/GettingStarted/Downloading-and-Compiling-Tristan) and [here](~/GettingStarted/Running-your-first-Tristan-MP-simulation) but compiling with the command
+You can reproduce these results similar to these by following the instructions [here](/tristan-mp-pitp/GettingStarted/Downloading-and-Compiling-Tristan) and [here](/tristan-mp-pitp/GettingStarted/Running-your-first-Tristan-MP-simulation) but compiling with the command
 
 `make USER_FILE=user/user_weibel`
 
