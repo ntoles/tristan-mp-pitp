@@ -17,11 +17,7 @@ title: "Tristan-MP Documentation"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: nil
 #search_enabled: false
-
-#title: ML and Stats Resources
-description: A wiki of Machine learning and Statistics resources useful for self-learning.
-#baseurl: "/ml_stat_resources" # the subpath of your site, e.g. /blog
-#url: "https://pcrumley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+description: The documentation for the massively parallel particle-in-cell code Tristan-MP
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "Rakefile"]
