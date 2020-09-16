@@ -12,4 +12,7 @@ nav_order: 2
   * [Closing a VNC Session](../Logging-in-to-tigressdata2#closing-a-vnc-session)
   * [Enabling Tigressdata2's GPUs](../Logging-in-to-tigressdata2#enabling-tigressdata2s-gpus)
   * [Accessing Jupyter Notebook using ssh](../Logging-in-to-tigressdata2#jupyter-notebook-through-ssh)
+
+* [Interactive Visualization with Iseult](../Interactive-visualization-with-Iseult)
+
 * [Writing your own python analysis scripts](../Writing-your-own-python-scripts)

@@ -82,8 +82,8 @@ or other appropriate submission command.
 
 When running, the code will create subdirectories output and restart.
 The output is single HDF5 files (single per time step).
-Currently we provide routines to interactively view output using python.
-https://github.com/pcrumley/Iseult
+Currently we provide routines to interactively view output using python:
+[iseult](https://github.com/pcrumley/Iseult)
 
 It requires anaconda to run. We had good experience with anaconda 4.0.0
 on Mac, but not later. The older version is available on anaconda's website.
