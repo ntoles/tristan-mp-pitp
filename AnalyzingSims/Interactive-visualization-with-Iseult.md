@@ -1,5 +1,5 @@
 ---
-title: Interactive Visualization with Iseult
+title: Interactive visualization with Iseult
 has_children: False
 parent: Analyzing Simulations
 nav_order: 2

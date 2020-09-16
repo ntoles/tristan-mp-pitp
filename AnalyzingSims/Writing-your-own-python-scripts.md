@@ -2,7 +2,7 @@
 title: Writing a python analysis script
 has_children: False
 parent: Analyzing Simulations
-nav_order: 2
+nav_order: 3
 ---
 
 ## Below is an example script to do some rudimentary analysis of tristan-MP outputs.
