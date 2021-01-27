@@ -1,3 +1,10 @@
+---
+title: Simplifying your Analysis Scripts
+has_children: False
+parent: Analyzing Simulations
+nav_order: 4
+---
+
 There is an automatic object relational mapping that exists for Pic Simulations here: https://pcrumley.github.io/tristanUtils/tristanSim.html 
 
 Here is the documentation repeated here: 
