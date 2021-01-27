@@ -16,3 +16,5 @@ nav_order: 2
 * [Interactive Visualization with Iseult](../Interactive-visualization-with-Iseult)
 
 * [Writing your own python analysis scripts](../Writing-your-own-python-scripts)
+
+* [Use tristanUtils to simplify writing analysis scripts](../using-tristan-Utils)
