@@ -1,4 +1,4 @@
-There is an automatic object relational mapping that exists for Pic Simulations here: https://pcrumley.github.io/tristanUtils/tristanSim.html 
+There is an automatic object relational mapping that exists for PIC simulations [here](https://pcrumley.github.io/tristanUtils/tristanSim.html)
 
 Here is the documentation repeated here: 
 
